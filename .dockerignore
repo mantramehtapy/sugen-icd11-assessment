@@ -1,0 +1,8 @@
+.git
+.venv
+__pycache__
+.pytest_cache
+outputs
+analysis/results
+*.ogg
+audio_models

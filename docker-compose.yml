@@ -1,0 +1,10 @@
+services:
+  coder:
+    build: .
+    environment:
+      SU_GEN_MODEL_MODE: ${SU_GEN_MODEL_MODE:-deterministic}
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
+    volumes:
+      - .:/in:ro
+      - ./outputs:/out
+    command: ["/in/notes.jsonl", "/out/predictions.jsonl"]
