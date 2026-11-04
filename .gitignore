@@ -2,7 +2,12 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
-outputs/*
-!outputs/.gitkeep
+audio_models/
+outputs/gemma-input.jsonl
+outputs/gemma-smoke.jsonl
 analysis/results/*
 !analysis/results/.gitkeep
+._*
+public/._*
+public/data/._*
+
