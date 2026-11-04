@@ -16,7 +16,7 @@ class Evidence:
 
 
 _MARKERS = {
-    "assessment": re.compile(r"\b(?:assessment|impression|diagnosis|diagnosed|dx|a:)\b", re.I),
+    "assessment": re.compile(r"(?:\b(?:assessment|impression|diagnosis|diagnosed|dx)\b|\ba\s*:)", re.I),
     "history": re.compile(r"\b(?:history|past medical history|pmh)\b", re.I),
 }
 _NEGATION = re.compile(r"\b(?:no|not|without|denies|negative for|excluded)\s+([a-z][a-z -]*)", re.I)
@@ -34,7 +34,8 @@ def extract_evidence(text: str) -> Evidence:
     normalized = normalize_text(text)
     for segment in _segments(normalized):
         if _MARKERS["assessment"].search(segment):
-            value = re.split(r"\b(?:assessment|impression|diagnosis|diagnosed|dx|a:)\b", segment, maxsplit=1, flags=re.I)[-1].strip(" :")
+            value = re.sub(r"^\s*a\s*:\s*", "", segment, flags=re.I)
+            value = re.split(r"\b(?:assessment|impression|diagnosis|diagnosed|dx)\b", value, maxsplit=1, flags=re.I)[-1].strip(" :")
             if value:
                 assessment.append(value)
         elif _MARKERS["history"].search(segment):
