@@ -34,7 +34,7 @@ The runtime uses the supplied catalogue at `public/data/mms-2026-01.json` and th
 
 ## Evaluation beyond the 60
 
-A 600-note repeated-development-input run was used only to inspect throughput and output completion. It does **not** measure hidden accuracy or generalisation. A clean-clone Docker run remains open because Docker Desktop was not reachable during the latest verification attempt.
+A clean-clone Docker run was verified on the current host after starting Docker Desktop. It produced 60 valid lines and scored **7.5 / 75** on the supplied development notes. This does **not** measure hidden accuracy or generalisation.
 
 ## AI-tooling error caught
 
@@ -49,7 +49,7 @@ The local Gemma model sometimes returned JSON inside Markdown code fences. The p
 - Candidate retrieval remains the main quality bottleneck.
 - Ambient-note and multilingual performance require further evaluation.
 - Gemma has not improved the measured development score and needs endpoint/timeout/contribution instrumentation before being considered for grading.
-- Clean-clone Docker verification, final decision-log completion, final hours statement, and the final Git bundle remain open.
+- Final decision-log completion, final hours statement, and the final Git bundle remain open.
 
 **Hours spent:** to be confirmed from the project time record before submission.
 

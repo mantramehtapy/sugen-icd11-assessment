@@ -69,10 +69,10 @@ This log records decisions made during the Sugen Technologies take-home assessme
 ## 2026-11-05 — Record Docker verification honestly
 
 - Commit: `ed5d46b`
-- Decision: Clone the private repository fresh and record Docker as blocked when the Docker daemon is unreachable rather than claiming a pass.
-- Options considered: report the historical local Docker run as final, simulate the result, or preserve the blocker explicitly.
-- Evidence: fresh clone reached commit `6335cbe`; `docker version` failed because the Docker Desktop Linux engine pipe was unavailable.
-- Revisit: start Docker Desktop and run the exact required command from the fresh clone.
+- Decision: Clone the private repository fresh and verify the exact Docker contract after starting Docker Desktop.
+- Options considered: report the historical local Docker run as final, simulate the result, or preserve the blocker until the daemon was available.
+- Evidence: fresh clone reached `3117f36`; Docker `29.6.1` became available; config, no-cache build, exact run, and scorer all passed with 60 valid lines and 7.5 / 75.
+- Revisit: repeat on the final commit if source files change after this verification.
 
 ## 2026-11-05 — Complete README with verified limits
 
