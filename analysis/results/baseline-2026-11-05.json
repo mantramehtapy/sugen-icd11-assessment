@@ -1,0 +1,2138 @@
+{
+  "commit": "eecbeb59b557437942e579f393dedb1ba4654fe7",
+  "commands": [
+    ".venv/Scripts/python.exe -m app public/data/dev_notes.jsonl outputs/dev-deterministic.jsonl",
+    "python public/score.py --gold public/data/dev_notes.jsonl --pred outputs/dev-deterministic.jsonl --mms public/data/mms-2026-01.json"
+  ],
+  "notes": 60,
+  "candidate_limit": 20,
+  "gold_retrieved_top20": 20,
+  "gold_recall_top20": 0.3333333333333333,
+  "score": {
+    "top1": 0.067,
+    "top3": 0.15,
+    "points": 7.1
+  },
+  "structural": {
+    "missing_predictions": 0,
+    "invalid_codes": 0,
+    "duplicate_ids": 0
+  },
+  "by_style": {
+    "typed_consult": {
+      "notes": 29,
+      "gold_retrieved": 12
+    },
+    "short_consult": {
+      "notes": 16,
+      "gold_retrieved": 4
+    },
+    "ambient_transcript": {
+      "notes": 15,
+      "gold_retrieved": 4
+    }
+  },
+  "rows": [
+    {
+      "id": "dev-001",
+      "style": "typed_consult",
+      "gold": [
+        "1F40.Z"
+      ],
+      "candidates_top20": [
+        "KA64.20",
+        "1F40.0",
+        "1F40.Y",
+        "1F40.Z",
+        "1F40",
+        "MG55.0",
+        "6C40.40",
+        "6C44.40",
+        "6C4E.40",
+        "6C4F.40",
+        "6C4G.40",
+        "CA23.02",
+        "CA23.12",
+        "CA23.32",
+        "NA0D.04",
+        "BD74.0",
+        "QE62",
+        "1C61.30",
+        "1C61.3Y",
+        "1C61.3Z"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "1F40.Z",
+        "1F40",
+        "6C40.40"
+      ]
+    },
+    {
+      "id": "dev-002",
+      "style": "short_consult",
+      "gold": [
+        "CA00",
+        "CA07.0"
+      ],
+      "candidates_top20": [
+        "1C61.30",
+        "1C61.3Y",
+        "1C61.3Z",
+        "1C62.30",
+        "1C62.3Y",
+        "1C62.3Z",
+        "JB63.60",
+        "KA64.20",
+        "KA64.21",
+        "KA64.2Z",
+        "1C61.0",
+        "1C61.1",
+        "1C61.2",
+        "1C61.Z",
+        "1C62.0",
+        "1C62.1",
+        "1C62.2",
+        "1C62.Z",
+        "1F40.0",
+        "1F40.Y"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "1C62.3Y",
+        "1C62.3Z",
+        "JB63.60"
+      ]
+    },
+    {
+      "id": "dev-003",
+      "style": "ambient_transcript",
+      "gold": [
+        "CA23.30"
+      ],
+      "candidates_top20": [
+        "PL13.7",
+        "QA77",
+        "QC04.0",
+        "PA2B",
+        "QF27",
+        "PA2A",
+        "JB61",
+        "DC72.Z",
+        "QA1C",
+        "PJ71",
+        "ST0N",
+        "6A80",
+        "PF6B",
+        "PL13.6",
+        "PJ70",
+        "QC11",
+        "QC12",
+        "KA05.70",
+        "QC01.3",
+        "PA0B"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "KA05.70",
+        "DC72.Z",
+        "PL13.6"
+      ]
+    },
+    {
+      "id": "dev-004",
+      "style": "typed_consult",
+      "gold": [
+        "1A07.Z"
+      ],
+      "candidates_top20": [
+        "6A02.0",
+        "QF27",
+        "6A02.1",
+        "1C62.2",
+        "1C62.0",
+        "BD50.4Z",
+        "KA8F.0",
+        "SR89",
+        "1C30.2",
+        "QD00",
+        "BD50.0Z",
+        "NC56.60",
+        "NC56.61",
+        "NC56.6Y",
+        "NC56.6Z",
+        "NC56.Y",
+        "NC56.Z",
+        "NA23.40",
+        "NC56.6",
+        "ME65.2"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "BD50.0Z",
+        "BD50.4Z",
+        "NC56.60"
+      ]
+    },
+    {
+      "id": "dev-005",
+      "style": "short_consult",
+      "gold": [
+        "1F23.10"
+      ],
+      "candidates_top20": [
+        "SB79",
+        "SR06",
+        "GC04.1A",
+        "GC40.00",
+        "GC40.01",
+        "GC40.0Z",
+        "GC40.10",
+        "GC40.11",
+        "GC40.1Z",
+        "GC40.20",
+        "GC40.21",
+        "GC40.2Z",
+        "GC40.31",
+        "GC40.32",
+        "GC40.33",
+        "GC40.35",
+        "GC40.36",
+        "GC40.37",
+        "GA14.2",
+        "GA14.3"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "GC04.1A",
+        "GC40.00",
+        "GC40.01"
+      ]
+    },
+    {
+      "id": "dev-006",
+      "style": "ambient_transcript",
+      "gold": [
+        "1E90.0"
+      ],
+      "candidates_top20": [
+        "PL13.7",
+        "QA77",
+        "QF27",
+        "5B55.2",
+        "PE00",
+        "PG50",
+        "PA60",
+        "QC11",
+        "QC12",
+        "JB61",
+        "PC30",
+        "QC04.0",
+        "PL13.6",
+        "QA82",
+        "MD30.0",
+        "PH23",
+        "QA76",
+        "PL14.2",
+        "JA82.5",
+        "6A02.0"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "5B55.2",
+        "6A02.0",
+        "JA82.5"
+      ]
+    },
+    {
+      "id": "dev-007",
+      "style": "typed_consult",
+      "gold": [
+        "CA40.Z"
+      ],
+      "candidates_top20": [
+        "CA40",
+        "SR66",
+        "SR67",
+        "ST0V",
+        "2A85.0",
+        "2A85.1",
+        "2A85.2",
+        "2A85.3",
+        "CA40.00",
+        "CA40.01",
+        "CA40.02",
+        "CA40.03",
+        "CA40.04",
+        "CA40.05",
+        "CA40.06",
+        "CA40.07",
+        "CA40.08",
+        "CA40.0Y",
+        "CA40.0Z",
+        "CA40.10"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "CA40.0Z",
+        "2A85.0",
+        "2A85.1"
+      ]
+    },
+    {
+      "id": "dev-008",
+      "style": "short_consult",
+      "gold": [
+        "1G05"
+      ],
+      "candidates_top20": [
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y",
+        "1A36.0Z",
+        "1A36.10",
+        "1A36.11",
+        "1A36.12",
+        "1A36.1Y",
+        "1A62.00",
+        "1A62.01",
+        "1A62.0Z",
+        "1A62.20",
+        "1A62.21",
+        "1A62.22",
+        "1A62.2Y",
+        "1A62.2Z",
+        "1A70.00",
+        "1A70.0Y",
+        "1A70.0Z",
+        "1B12.40"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y"
+      ]
+    },
+    {
+      "id": "dev-009",
+      "style": "typed_consult",
+      "gold": [
+        "1B10.0"
+      ],
+      "candidates_top20": [
+        "QF27",
+        "1C60.2",
+        "1C61.2",
+        "1C60.1",
+        "1C61.1",
+        "1C62.2",
+        "1C62.1",
+        "PL13.7",
+        "PL14.C",
+        "QA8D",
+        "QA77",
+        "QA21.1",
+        "4A01.01",
+        "QC11",
+        "QC12",
+        "QB9Y",
+        "QB9Z",
+        "QF26",
+        "1C60.3Y",
+        "1C60.3Z"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "1C62.1",
+        "1C62.2",
+        "PL13.7"
+      ]
+    },
+    {
+      "id": "dev-010",
+      "style": "ambient_transcript",
+      "gold": [
+        "CA03.Z"
+      ],
+      "candidates_top20": [
+        "QC11",
+        "QC12",
+        "PL13.7",
+        "QA77",
+        "SS56",
+        "QF27",
+        "PK80.A0",
+        "QC04.0",
+        "PL14.C",
+        "QA8D",
+        "QC04.4",
+        "CA03",
+        "PE00",
+        "PH20",
+        "PG50",
+        "5B55.2",
+        "DA01.30",
+        "PA60",
+        "QA1C",
+        "KA83.0Y"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "DA01.30",
+        "5B55.2",
+        "PL13.7"
+      ]
+    },
+    {
+      "id": "dev-011",
+      "style": "typed_consult",
+      "gold": [
+        "1C62.0"
+      ],
+      "candidates_top20": [
+        "1C60.0",
+        "1C61.0",
+        "1C62.0",
+        "1C60.3Y",
+        "1C60.3Z",
+        "1C61.3Y",
+        "1C61.3Z",
+        "1C62.3Y",
+        "1C62.3Z",
+        "1C60.1",
+        "1C60.2",
+        "1C61.1",
+        "1C61.2",
+        "1C62.1",
+        "1C62.2",
+        "1C60.3",
+        "1C61.3",
+        "1C62.3",
+        "GB60.0",
+        "GB61.0"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "1C62.0",
+        "1C62.3Y",
+        "1C62.3Z"
+      ]
+    },
+    {
+      "id": "dev-012",
+      "style": "short_consult",
+      "gold": [
+        "1F86.0"
+      ],
+      "candidates_top20": [
+        "GA10.DY",
+        "GA10.DZ",
+        "GC04.18",
+        "GC04.19",
+        "GC40.52",
+        "GC40.54",
+        "MF50.23",
+        "MF50.2Y",
+        "MF50.2Z",
+        "MF50.61",
+        "MF50.62",
+        "PK93.10",
+        "2C94.0",
+        "2C94.1",
+        "2C95.0",
+        "2C95.1",
+        "2C95.2",
+        "2C95.Y",
+        "2C95.Z",
+        "GB70.Z"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "GA10.DY",
+        "GA10.DZ",
+        "GC40.54"
+      ]
+    },
+    {
+      "id": "dev-013",
+      "style": "typed_consult",
+      "gold": [
+        "CA22.0"
+      ],
+      "candidates_top20": [
+        "MD30.0",
+        "PH23",
+        "PL13.7",
+        "QF27",
+        "QA77",
+        "MD11.5",
+        "PB03",
+        "PC73",
+        "PE63",
+        "PH20",
+        "MD12",
+        "6A02.0",
+        "6A02.1",
+        "CA22.0",
+        "LD24.21",
+        "KD37",
+        "1D42",
+        "PG50",
+        "QD70.5",
+        "8B21.Y"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "LD24.21",
+        "6A02.0",
+        "6A02.1"
+      ]
+    },
+    {
+      "id": "dev-014",
+      "style": "ambient_transcript",
+      "gold": [
+        "1A40.Z"
+      ],
+      "candidates_top20": [
+        "PL13.7",
+        "QA77",
+        "JB61",
+        "QF27",
+        "QA1C",
+        "QC11",
+        "QC12",
+        "MD24",
+        "QC04.0",
+        "5B55.2",
+        "JB63.Y",
+        "JB63.Z",
+        "JB63",
+        "JB61.Z",
+        "DC72.Z",
+        "5C70.0",
+        "SS56",
+        "ME24.A6",
+        "QC01.3",
+        "ME05.1"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "ME24.A6",
+        "5B55.2",
+        "5C70.0"
+      ]
+    },
+    {
+      "id": "dev-015",
+      "style": "short_consult",
+      "gold": [
+        "1F28.0"
+      ],
+      "candidates_top20": [
+        "1G00.0",
+        "1F2D.4",
+        "SB72",
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y",
+        "1A36.0Z",
+        "1A36.10",
+        "1A36.11",
+        "1A36.12",
+        "1A36.1Y",
+        "1A62.00",
+        "1A62.01",
+        "1A62.0Z",
+        "1A62.20",
+        "1A62.21",
+        "1A62.22",
+        "1A62.2Y",
+        "1A62.2Z",
+        "1A70.00"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "1F2D.4",
+        "1G00.0",
+        "SB72"
+      ]
+    },
+    {
+      "id": "dev-016",
+      "style": "typed_consult",
+      "gold": [
+        "1B95"
+      ],
+      "candidates_top20": [
+        "1B95",
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y",
+        "1A36.0Z",
+        "1A36.10",
+        "1A36.11",
+        "1A36.12",
+        "1A36.1Y",
+        "1A62.00",
+        "1A62.01",
+        "1A62.0Z",
+        "1A62.20",
+        "1A62.21",
+        "1A62.22",
+        "1A62.2Y",
+        "1A62.2Z",
+        "1A70.00",
+        "1A70.0Y",
+        "1A70.0Z"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "1B95",
+        "1A36.00",
+        "1A36.01"
+      ]
+    },
+    {
+      "id": "dev-017",
+      "style": "ambient_transcript",
+      "gold": [
+        "CA01"
+      ],
+      "candidates_top20": [
+        "PL13.7",
+        "QA77",
+        "QC11",
+        "QC12",
+        "4A01.01",
+        "MD24",
+        "JB61",
+        "PL13.6",
+        "QA1C",
+        "QF27",
+        "CA01",
+        "LD25.Y",
+        "LD25.Z",
+        "LD25",
+        "5B55.2",
+        "QC01.3",
+        "4A01.05",
+        "6A23.01",
+        "6A23.02",
+        "LD21.Y"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "6A23.01",
+        "6A23.02",
+        "5B55.2"
+      ]
+    },
+    {
+      "id": "dev-018",
+      "style": "typed_consult",
+      "gold": [
+        "1A36.00"
+      ],
+      "candidates_top20": [
+        "1A36.10",
+        "1A36.11",
+        "SA56",
+        "SM38",
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y",
+        "1A36.0Z",
+        "1A36.12",
+        "1A36.1Y",
+        "1A62.00",
+        "1A62.01",
+        "1A62.0Z",
+        "1A62.20",
+        "1A62.21",
+        "1A62.22",
+        "1A62.2Y",
+        "1A62.2Z",
+        "1A70.00",
+        "1A70.0Y"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "1A36.10",
+        "1A36.11",
+        "SA56"
+      ]
+    },
+    {
+      "id": "dev-019",
+      "style": "short_consult",
+      "gold": [
+        "1D80.0"
+      ],
+      "candidates_top20": [
+        "1D80",
+        "1D80.0",
+        "1D80.1",
+        "1D80.2",
+        "1D80.3",
+        "1D80.4",
+        "1D80.Y",
+        "QC01.7",
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y",
+        "1A36.0Z",
+        "1A36.10",
+        "1A36.11",
+        "1A36.12",
+        "1A36.1Y",
+        "1A62.00",
+        "1A62.01",
+        "1A62.0Z",
+        "1A62.20"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "1D80.1",
+        "1D80.2",
+        "1D80.3"
+      ]
+    },
+    {
+      "id": "dev-020",
+      "style": "typed_consult",
+      "gold": [
+        "CA42.Z"
+      ],
+      "candidates_top20": [
+        "QF27",
+        "PH20",
+        "6A02.0",
+        "6A02.1",
+        "PB00",
+        "PC70",
+        "PE60",
+        "PH23",
+        "8B25.4",
+        "CA42",
+        "MD30.0",
+        "8B01.2",
+        "PB03",
+        "PC73",
+        "PE63",
+        "8B20",
+        "PK80.A0",
+        "PK80.A1",
+        "PK80.A2",
+        "PK80.AY"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "6A02.0",
+        "6A02.1",
+        "8B01.2"
+      ]
+    },
+    {
+      "id": "dev-021",
+      "style": "typed_consult",
+      "gold": [
+        "DA42.Z"
+      ],
+      "candidates_top20": [
+        "DD90.4",
+        "MD90",
+        "ME24.A5",
+        "MD90.0",
+        "6A02.0",
+        "6A02.1",
+        "DA42.7Y",
+        "DA42.7",
+        "NA23.40",
+        "ME65.2",
+        "MD90.1",
+        "8B01.2",
+        "8B25.4",
+        "DA42",
+        "8B20",
+        "DA42.1",
+        "JA81.3",
+        "PK81.5",
+        "PL01.2",
+        "MG31.0"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "DA42.7Y",
+        "ME24.A5",
+        "6A02.0"
+      ]
+    },
+    {
+      "id": "dev-022",
+      "style": "typed_consult",
+      "gold": [
+        "GC08.Z"
+      ],
+      "candidates_top20": [
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y",
+        "1A36.0Z",
+        "1A36.10",
+        "1A36.11",
+        "1A36.12",
+        "1A36.1Y",
+        "1A62.00",
+        "1A62.01",
+        "1A62.0Z",
+        "1A62.20",
+        "1A62.21",
+        "1A62.22",
+        "1A62.2Y",
+        "1A62.2Z",
+        "1A70.00",
+        "1A70.0Y",
+        "1A70.0Z",
+        "1B12.40"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y"
+      ]
+    },
+    {
+      "id": "dev-023",
+      "style": "short_consult",
+      "gold": [
+        "FA01.Z"
+      ],
+      "candidates_top20": [
+        "4A01.01",
+        "NA23.40",
+        "MD30.0",
+        "KA21.42",
+        "NA07.02",
+        "NA07.03",
+        "ME85",
+        "SE3A",
+        "8B01.2",
+        "8B25.4",
+        "PL13.6",
+        "PL13.7",
+        "8B11.4",
+        "8B20",
+        "QA76",
+        "QA77",
+        "2A81.9",
+        "FA36.0",
+        "FA36.Y",
+        "FA36.Z"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "KA21.42",
+        "NA07.02",
+        "NA07.03"
+      ]
+    },
+    {
+      "id": "dev-024",
+      "style": "typed_consult",
+      "gold": [
+        "EB00.0"
+      ],
+      "candidates_top20": [
+        "EB00.0",
+        "RA01.1",
+        "1E32",
+        "FB40.4",
+        "2A60.3Y",
+        "ME24.90",
+        "2B33.0",
+        "MG31.0",
+        "MG31.1",
+        "MG31.2",
+        "QC04.1",
+        "2A60.3",
+        "GB54",
+        "RA01.0",
+        "1E30",
+        "1E31",
+        "2A21.10",
+        "4A85.21",
+        "EK50.00",
+        "EB00.1"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "2A60.3Y",
+        "ME24.90",
+        "2B33.0"
+      ]
+    },
+    {
+      "id": "dev-025",
+      "style": "ambient_transcript",
+      "gold": [
+        "GA34.3"
+      ],
+      "candidates_top20": [
+        "JB61",
+        "PL13.7",
+        "QA77",
+        "QC11",
+        "QC12",
+        "SR89",
+        "QA1C",
+        "KB27.4",
+        "JB61.0",
+        "JB61.1",
+        "JB61.Z",
+        "5B55.2",
+        "QF27",
+        "QC04.0",
+        "QD31",
+        "GA34.3",
+        "NB9Y",
+        "NB9Z",
+        "SS56",
+        "MG31.0"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "5B55.2",
+        "GA34.3",
+        "JB61.0"
+      ]
+    },
+    {
+      "id": "dev-026",
+      "style": "typed_consult",
+      "gold": [
+        "DA09.60"
+      ],
+      "candidates_top20": [
+        "DA09.60",
+        "DA09.61",
+        "DA09.62",
+        "DA09.6Y",
+        "DA09.6Z",
+        "1A70.1",
+        "DA09.6",
+        "SM11",
+        "NC98.1",
+        "9C40.A1",
+        "1A70.0Y",
+        "1A70.0Z",
+        "1A70.0",
+        "PK80.B0",
+        "PK80.B1",
+        "PK80.B2",
+        "PK80.BY",
+        "PK80.BZ",
+        "6B60.84",
+        "PK80.B"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "1A70.0Y",
+        "1A70.0Z",
+        "DA09.60"
+      ]
+    },
+    {
+      "id": "dev-027",
+      "style": "ambient_transcript",
+      "gold": [
+        "GB51"
+      ],
+      "candidates_top20": [
+        "PL13.7",
+        "QA77",
+        "QC11",
+        "QC12",
+        "PL13.6",
+        "QA76",
+        "QF27",
+        "QB12.Y",
+        "QB12.Z",
+        "QB12",
+        "SR89",
+        "QC04.0",
+        "GB51",
+        "QA1C",
+        "PL14.C",
+        "QA8D",
+        "QC04.4",
+        "MA16.1Z",
+        "PK81.7",
+        "MA16.1"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "MA16.1Z",
+        "PL13.6",
+        "PL13.7"
+      ]
+    },
+    {
+      "id": "dev-028",
+      "style": "typed_consult",
+      "gold": [
+        "DA22.Z"
+      ],
+      "candidates_top20": [
+        "NA0A.03",
+        "DA01.30",
+        "MD93",
+        "MD95",
+        "KA05.70",
+        "MB28.Y",
+        "MB28.Z",
+        "ME90",
+        "MA13.Y",
+        "ME24.A6",
+        "MA13.0Y",
+        "MA13.0",
+        "QF27",
+        "6A25.1",
+        "MD12",
+        "MA13.1",
+        "SR8C",
+        "MD90.1",
+        "SF99",
+        "SD7Y"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "DA01.30",
+        "KA05.70",
+        "MA13.0Y"
+      ]
+    },
+    {
+      "id": "dev-029",
+      "style": "short_consult",
+      "gold": [
+        "FB40.1"
+      ],
+      "candidates_top20": [
+        "FB40.1",
+        "ND15.1",
+        "QA1C",
+        "ND16.10",
+        "ND16.1Y",
+        "ND16.1Z",
+        "ND16.1",
+        "MB44.2",
+        "LA8A.10",
+        "MG31.0",
+        "PL13.7",
+        "QA77",
+        "LD41.B0",
+        "LD41.B1",
+        "LD44.C0",
+        "LD44.C1",
+        "MD30.0",
+        "9C40.A1",
+        "ND17.00",
+        "ND17.01"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "LA8A.10",
+        "LD41.B0",
+        "LD41.B1"
+      ]
+    },
+    {
+      "id": "dev-030",
+      "style": "typed_consult",
+      "gold": [
+        "ED80.2"
+      ],
+      "candidates_top20": [
+        "ED80.2",
+        "ED80.1",
+        "ED80",
+        "ED90.01",
+        "ED80.40",
+        "ED80.41",
+        "ED80.4Y",
+        "ED80.4Z",
+        "ED80.0",
+        "ED80.3",
+        "ED80.5",
+        "ED80.6",
+        "ED80.Y",
+        "ED80.Z",
+        "EH67.Y",
+        "EH67.Z",
+        "KC21.0",
+        "ED80.4",
+        "SN4V",
+        "NB31.02"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "ED80.1",
+        "ED80.2",
+        "ED80.40"
+      ]
+    },
+    {
+      "id": "dev-031",
+      "style": "ambient_transcript",
+      "gold": [
+        "GA90"
+      ],
+      "candidates_top20": [
+        "JB61",
+        "PL13.7",
+        "QA77",
+        "JB61.0",
+        "JB61.1",
+        "JB61.Z",
+        "QC11",
+        "QC12",
+        "SR89",
+        "QF27",
+        "JA81.3",
+        "PL13.6",
+        "PL14.C",
+        "QA8D",
+        "MA13.Y",
+        "QA1C",
+        "QA76",
+        "NA0A.02",
+        "JA8D.1",
+        "KA80.5"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "NA0A.02",
+        "JA8D.1",
+        "JB61.0"
+      ]
+    },
+    {
+      "id": "dev-032",
+      "style": "typed_consult",
+      "gold": [
+        "DB60.Z"
+      ],
+      "candidates_top20": [
+        "ME05",
+        "ME05.Y",
+        "ME05.Z",
+        "EG7Y",
+        "ND72.20",
+        "SR8B",
+        "FB56.0",
+        "EE6Y",
+        "EE6Z",
+        "QB10",
+        "QB15",
+        "LD41.60",
+        "LD44.70",
+        "FB56",
+        "DA09.5",
+        "9A26",
+        "ME24.A6",
+        "QF27",
+        "GC04.19",
+        "DB60"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "LD41.60",
+        "LD44.70",
+        "ME24.A6"
+      ]
+    },
+    {
+      "id": "dev-033",
+      "style": "short_consult",
+      "gold": [
+        "FA25.2Z"
+      ],
+      "candidates_top20": [
+        "FA25",
+        "ST0K",
+        "ST0L",
+        "4A01.05",
+        "6C40.43",
+        "GC04.19",
+        "4A01.01",
+        "ND14.10",
+        "ND14.11",
+        "ND14.1Z",
+        "ND14.90",
+        "ND14.91",
+        "ND14.9Z",
+        "ND13.4",
+        "ND14.1",
+        "ND14.9",
+        "MG31.0",
+        "NA23.40",
+        "NA23.41",
+        "NA23.42"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "6C40.43",
+        "ND14.10",
+        "ND14.11"
+      ]
+    },
+    {
+      "id": "dev-034",
+      "style": "typed_consult",
+      "gold": [
+        "GA05.0"
+      ],
+      "candidates_top20": [
+        "1A36.00",
+        "1B41.1Y",
+        "1B41.1Z",
+        "1C1C.20",
+        "1E91.40",
+        "1E91.41",
+        "1E91.4Y",
+        "1E91.4Z",
+        "1F25.00",
+        "2A60.20",
+        "2A60.30",
+        "2A60.31",
+        "2A60.32",
+        "2A60.33",
+        "2A60.34",
+        "2A60.35",
+        "2A60.36",
+        "2A60.37",
+        "2A60.38",
+        "2A60.3Y"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "1A36.00",
+        "1B41.1Y",
+        "1B41.1Z"
+      ]
+    },
+    {
+      "id": "dev-035",
+      "style": "ambient_transcript",
+      "gold": [
+        "DA61"
+      ],
+      "candidates_top20": [
+        "PL13.7",
+        "QA77",
+        "QC11",
+        "QC12",
+        "QF27",
+        "4A01.01",
+        "QA1C",
+        "PL14.C",
+        "QA8D",
+        "4A01.05",
+        "6B80.2",
+        "MA12.Y",
+        "5B55.2",
+        "MA12",
+        "NA23.40",
+        "PL13.6",
+        "LA87.40",
+        "LA87.41",
+        "CA71.0",
+        "DA7Z"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "LA87.40",
+        "LA87.41",
+        "5B55.2"
+      ]
+    },
+    {
+      "id": "dev-036",
+      "style": "typed_consult",
+      "gold": [
+        "EK00.6"
+      ],
+      "candidates_top20": [
+        "EK00",
+        "4A85.22",
+        "EG40.0",
+        "EK00.0",
+        "EK00.1",
+        "EK00.2",
+        "EK00.3",
+        "EK00.4",
+        "EK00.5",
+        "EK00.6",
+        "EK00.7",
+        "EK00.8",
+        "EK00.9",
+        "EK00.A",
+        "EK00.B",
+        "EK00.C",
+        "EK00.Y",
+        "EK00.Z",
+        "9A06.72",
+        "DA02.30"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "4A85.22",
+        "EG40.0",
+        "EK00.0"
+      ]
+    },
+    {
+      "id": "dev-037",
+      "style": "short_consult",
+      "gold": [
+        "GC08.0"
+      ],
+      "candidates_top20": [
+        "4A01.34",
+        "LD24.21",
+        "1E50.4",
+        "1E51.3",
+        "3A03.6",
+        "3A51.A",
+        "5B58",
+        "1A36.0Y",
+        "1A36.0Z",
+        "1B21.2Y",
+        "1B21.2Z",
+        "1D01.00",
+        "1E91.4Y",
+        "1E91.4Z",
+        "1F00.21",
+        "1F27.10",
+        "1F66.30",
+        "1F66.31",
+        "1F66.32",
+        "1F70.00"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "1A36.0Y",
+        "1A36.0Z",
+        "1B21.2Y"
+      ]
+    },
+    {
+      "id": "dev-038",
+      "style": "typed_consult",
+      "gold": [
+        "DD91.1"
+      ],
+      "candidates_top20": [
+        "DD91.1",
+        "3A00.0Z",
+        "3A00.0",
+        "ME05.Y",
+        "ME05.Z",
+        "ME05",
+        "NA07.04",
+        "NA07.05",
+        "MF50.64",
+        "DD91.4",
+        "ME24.A6",
+        "ME05.0",
+        "6A02.0",
+        "6A02.1",
+        "DD91.3",
+        "JA81.3",
+        "DD91.00",
+        "ME20.3",
+        "DD91.Y",
+        "DD91.Z"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "3A00.0Z",
+        "DD91.00",
+        "ME24.A6"
+      ]
+    },
+    {
+      "id": "dev-039",
+      "style": "short_consult",
+      "gold": [
+        "FB53.0"
+      ],
+      "candidates_top20": [
+        "SR67",
+        "NA23.40",
+        "SP15",
+        "6A02.0",
+        "6A02.1",
+        "ED70.Y",
+        "4A01.05",
+        "ED70",
+        "EJ4Z",
+        "QF27",
+        "EH72.00",
+        "ED70.0",
+        "ED70.1",
+        "GC04.19",
+        "8B25.4",
+        "LD47.0",
+        "NA0A.03",
+        "ME90",
+        "MF9C",
+        "MD30.0"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "EH72.00",
+        "NA0A.03",
+        "6A02.0"
+      ]
+    },
+    {
+      "id": "dev-040",
+      "style": "ambient_transcript",
+      "gold": [
+        "GA02.0"
+      ],
+      "candidates_top20": [
+        "QC11",
+        "QC12",
+        "PL13.7",
+        "QA77",
+        "QC04.4",
+        "SR89",
+        "NA23.40",
+        "QC04.2",
+        "QA1C",
+        "QC04.3",
+        "QC04.5",
+        "GA02.0",
+        "QF27",
+        "MG31.0",
+        "PK81.7",
+        "PL13.6",
+        "5B55.2",
+        "PJ71",
+        "LD2A.3",
+        "PA2B"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "5B55.2",
+        "GA02.0",
+        "LD2A.3"
+      ]
+    },
+    {
+      "id": "dev-041",
+      "style": "typed_consult",
+      "gold": [
+        "5A11"
+      ],
+      "candidates_top20": [
+        "KB60.1",
+        "MF55",
+        "JA60.Y",
+        "JA60.Z",
+        "JA60",
+        "MD90.1",
+        "QF27",
+        "JA85.3",
+        "8C21.3",
+        "2E6A.Y",
+        "NA0A.03",
+        "MG31.0",
+        "HA40.Y",
+        "SS22",
+        "HA40",
+        "LD24.21",
+        "MG43.5",
+        "6A02.0",
+        "6A02.1",
+        "PH70"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "LD24.21",
+        "NA0A.03",
+        "2E6A.Y"
+      ]
+    },
+    {
+      "id": "dev-042",
+      "style": "short_consult",
+      "gold": [
+        "BA00.0"
+      ],
+      "candidates_top20": [
+        "1C60.3Y",
+        "1C60.3Z",
+        "1C61.3Y",
+        "1C61.3Z",
+        "1C62.3Y",
+        "1C62.3Z",
+        "GB61.4",
+        "1C60.3",
+        "1C61.3",
+        "1C62.3",
+        "1C60.1",
+        "1C61.1",
+        "1C62.1",
+        "GB60.1",
+        "GB61.1",
+        "8C21.3",
+        "QE23",
+        "SQ80",
+        "SR10",
+        "SR66"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "1C62.1",
+        "GB60.1",
+        "GB61.1"
+      ]
+    },
+    {
+      "id": "dev-043",
+      "style": "ambient_transcript",
+      "gold": [
+        "JA40.0"
+      ],
+      "candidates_top20": [
+        "PL13.7",
+        "QA77",
+        "QF27",
+        "NA23.40",
+        "JA81.1",
+        "JA81.2",
+        "QD31",
+        "QC11",
+        "QC12",
+        "QA1C",
+        "PL13.6",
+        "4A01.01",
+        "QA76",
+        "QA20",
+        "5B55.2",
+        "MA13.Y",
+        "GA30.02",
+        "JA20.3",
+        "LD2A.3",
+        "LA87.40"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "GA30.02",
+        "LA87.40",
+        "5B55.2"
+      ]
+    },
+    {
+      "id": "dev-044",
+      "style": "typed_consult",
+      "gold": [
+        "5A21.0"
+      ],
+      "candidates_top20": [
+        "MB29.Y",
+        "MB29.Z",
+        "MB29",
+        "8B01.2",
+        "8B25.4",
+        "8B20",
+        "PC30",
+        "PE00",
+        "QF27",
+        "PL13.7",
+        "QA77",
+        "JB61.0",
+        "JB61.1",
+        "JB61.Z",
+        "JB61",
+        "8C21.2",
+        "8C21.3",
+        "6C46.62",
+        "KB60.1",
+        "PC78"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "6C46.62",
+        "8B01.2",
+        "8B25.4"
+      ]
+    },
+    {
+      "id": "dev-045",
+      "style": "typed_consult",
+      "gold": [
+        "BD71.4"
+      ],
+      "candidates_top20": [
+        "MG29.3",
+        "GC40.37",
+        "MD22",
+        "SR67",
+        "PA60",
+        "PC30",
+        "PE00",
+        "PG50",
+        "NC90.Y",
+        "NC90.Z",
+        "NC90",
+        "ME64.0",
+        "LD24.21",
+        "GC40.36",
+        "NB52.3",
+        "6A02.0",
+        "6A02.1",
+        "MG29",
+        "QF27",
+        "NC9Y"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "GC40.36",
+        "GC40.37",
+        "LD24.21"
+      ]
+    },
+    {
+      "id": "dev-046",
+      "style": "short_consult",
+      "gold": [
+        "JB64.0"
+      ],
+      "candidates_top20": [
+        "JB64.0",
+        "3A71.0",
+        "3A71.1",
+        "3A71.2",
+        "4A45.2",
+        "JA25.0",
+        "JA40.Y",
+        "JA40.Z",
+        "JA60.Y",
+        "JA60.Z",
+        "JA61.0",
+        "JA61.1",
+        "JA61.2",
+        "JA61.3",
+        "JA61.4",
+        "JA61.5",
+        "JA61.Y",
+        "JA61.Z",
+        "JA62.0",
+        "JA62.1"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "JB64.0",
+        "3A71.0",
+        "3A71.1"
+      ]
+    },
+    {
+      "id": "dev-047",
+      "style": "ambient_transcript",
+      "gold": [
+        "5A02.0"
+      ],
+      "candidates_top20": [
+        "PL13.7",
+        "QA77",
+        "JB61",
+        "MA13.Y",
+        "PE00",
+        "MA13",
+        "PA60",
+        "PG50",
+        "QF27",
+        "MA12.Y",
+        "MA14.Y",
+        "MA15.Y",
+        "MA16.Y",
+        "MA16.Z",
+        "MA11",
+        "MA17",
+        "MA1Y",
+        "MA12",
+        "MA14",
+        "MA15"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "MA12.Y",
+        "MA13.Y",
+        "MA14.Y"
+      ]
+    },
+    {
+      "id": "dev-048",
+      "style": "typed_consult",
+      "gold": [
+        "JA24.1"
+      ],
+      "candidates_top20": [
+        "QF27",
+        "MB47.2",
+        "QB92",
+        "QA00.62",
+        "QD70.6",
+        "MG30.63",
+        "MG30.64",
+        "MG30.65",
+        "MG30.66",
+        "MG29",
+        "9D90.3",
+        "JA82.4",
+        "4A01.01",
+        "JA8Y",
+        "JA8Z",
+        "JA65.Y",
+        "JA65.Z",
+        "JA83.0",
+        "JA83.1",
+        "JA83.2"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "QA00.62",
+        "JA82.4",
+        "JA83.0"
+      ]
+    },
+    {
+      "id": "dev-049",
+      "style": "typed_consult",
+      "gold": [
+        "4A84.0"
+      ],
+      "candidates_top20": [
+        "4A84",
+        "4A80.1",
+        "QF27",
+        "4A84.3Y",
+        "4A84.3Z",
+        "4A84.3",
+        "JA8D.1",
+        "NC75.10",
+        "NC75.11",
+        "NC75.1Y",
+        "NC75.1Z",
+        "NC75.20",
+        "NC75.21",
+        "NC75.2Y",
+        "NC75.2Z",
+        "NC76.30",
+        "NC76.31",
+        "NC76.3Y",
+        "NC76.3Z",
+        "NC76.4Y"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "4A84.3Y",
+        "4A84.3Z",
+        "NC75.10"
+      ]
+    },
+    {
+      "id": "dev-050",
+      "style": "short_consult",
+      "gold": [
+        "BC81.3Z"
+      ],
+      "candidates_top20": [
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y",
+        "1A36.0Z",
+        "1A36.10",
+        "1A36.11",
+        "1A36.12",
+        "1A36.1Y",
+        "1A62.00",
+        "1A62.01",
+        "1A62.0Z",
+        "1A62.20",
+        "1A62.21",
+        "1A62.22",
+        "1A62.2Y",
+        "1A62.2Z",
+        "1A70.00",
+        "1A70.0Y",
+        "1A70.0Z",
+        "1B12.40"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y"
+      ]
+    },
+    {
+      "id": "dev-051",
+      "style": "typed_consult",
+      "gold": [
+        "5B52"
+      ],
+      "candidates_top20": [
+        "KB60.1",
+        "PA0B",
+        "PA1B",
+        "PA2B",
+        "PF4B",
+        "PF5B",
+        "PF6B",
+        "SR67",
+        "5C70.0",
+        "KA00.A",
+        "MG43.31",
+        "ME05.1",
+        "MG29.01",
+        "MG29.3",
+        "1C62.1",
+        "MG29",
+        "EJ2Y",
+        "EJ71",
+        "PE00",
+        "JA66.0"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "MG29.01",
+        "MG43.31",
+        "1C62.1"
+      ]
+    },
+    {
+      "id": "dev-052",
+      "style": "ambient_transcript",
+      "gold": [
+        "BD10"
+      ],
+      "candidates_top20": [
+        "PL13.7",
+        "QA77",
+        "MC80.01",
+        "SF6G",
+        "MA13.Y",
+        "QC11",
+        "QC12",
+        "MC80.02",
+        "MC80.03",
+        "SF99",
+        "QF27",
+        "PK9A.21",
+        "SR89",
+        "9C2Y",
+        "9C2Z",
+        "JB61.0",
+        "JB61.1",
+        "JB61.Z",
+        "SD7Y",
+        "SD7Z"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "MC80.01",
+        "MC80.02",
+        "MC80.03"
+      ]
+    },
+    {
+      "id": "dev-053",
+      "style": "typed_consult",
+      "gold": [
+        "QA42.0"
+      ],
+      "candidates_top20": [
+        "MF50.7",
+        "MD90.0",
+        "6A02.0",
+        "6A02.1",
+        "KB20.0",
+        "6A70.0",
+        "KB20.1",
+        "QA21.60",
+        "KB21.1",
+        "QA42.0",
+        "KA21.00",
+        "KA21.01",
+        "KA21.02",
+        "KA21.0Z",
+        "KA21.10",
+        "KA21.11",
+        "KA21.1Z",
+        "KA21.20",
+        "KA21.21",
+        "KA21.2Z"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "KA21.00",
+        "KA21.01",
+        "KA21.02"
+      ]
+    },
+    {
+      "id": "dev-054",
+      "style": "short_consult",
+      "gold": [
+        "5A40.0"
+      ],
+      "candidates_top20": [
+        "5A40.0",
+        "MA14.1C",
+        "QA45.1",
+        "1A36.00",
+        "1A36.01",
+        "1A36.0Y",
+        "1A36.0Z",
+        "1A36.10",
+        "1A36.11",
+        "1A36.12",
+        "1A36.1Y",
+        "1A62.00",
+        "1A62.01",
+        "1A62.0Z",
+        "1A62.20",
+        "1A62.21",
+        "1A62.22",
+        "1A62.2Y",
+        "1A62.2Z",
+        "1A70.00"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "MA14.1C",
+        "5A40.0",
+        "QA45.1"
+      ]
+    },
+    {
+      "id": "dev-055",
+      "style": "typed_consult",
+      "gold": [
+        "BA40.1"
+      ],
+      "candidates_top20": [
+        "PC30",
+        "PE00",
+        "8B01.2",
+        "8B25.4",
+        "8B20",
+        "MD30.0",
+        "QF27",
+        "BA40.1",
+        "MD30",
+        "KA05.70",
+        "KA05.71",
+        "KA05.7Z",
+        "KA05.7",
+        "PA60",
+        "PG50",
+        "PD24",
+        "PF14",
+        "PL14.C",
+        "QA8D",
+        "PL13.7"
+      ],
+      "gold_retrieved": true,
+      "predicted": [
+        "KA05.70",
+        "KA05.71",
+        "KA05.7Z"
+      ]
+    },
+    {
+      "id": "dev-056",
+      "style": "ambient_transcript",
+      "gold": [
+        "JA63.2"
+      ],
+      "candidates_top20": [
+        "4A01.01",
+        "PL13.7",
+        "QA77",
+        "JB61.0",
+        "JB61.1",
+        "JB61.Z",
+        "JB61",
+        "4A01.05",
+        "PL13.6",
+        "QA76",
+        "QC04.0",
+        "PH74",
+        "QA8D",
+        "QA42.0",
+        "QC04.4",
+        "PB54",
+        "PD24",
+        "PF14",
+        "PK81.1",
+        "QA7Y"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "JB61.0",
+        "JB61.1",
+        "JB61.Z"
+      ]
+    },
+    {
+      "id": "dev-057",
+      "style": "typed_consult",
+      "gold": [
+        "5A00.2Z"
+      ],
+      "candidates_top20": [
+        "MB22.7",
+        "EJ4Z",
+        "ME05.0",
+        "2A85.3",
+        "5A00",
+        "5A00.00",
+        "5A00.01",
+        "JA65.3",
+        "QB92",
+        "SS88",
+        "ST0H",
+        "ST0N",
+        "8A61.3Y",
+        "8A61.3Z",
+        "8B61.3",
+        "8A61.3",
+        "4A01.01",
+        "2D60.0",
+        "ND90.0",
+        "ND90.1"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "8A61.3Y",
+        "8A61.3Z",
+        "2A85.3"
+      ]
+    },
+    {
+      "id": "dev-058",
+      "style": "short_consult",
+      "gold": [
+        "BD90.0"
+      ],
+      "candidates_top20": [
+        "2D60.Y",
+        "2D60.Z",
+        "4A44.5",
+        "MA01.0",
+        "MA01.1",
+        "2D6Z",
+        "2D60",
+        "CA07.0",
+        "SR66",
+        "SR67",
+        "ST0V",
+        "BC80.2Y",
+        "BC80.2Z",
+        "BC81.5",
+        "BC80.2",
+        "2D60.0",
+        "2D60.1",
+        "2D60.2",
+        "2D60.3",
+        "2D60.4"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "2D60.0",
+        "2D60.1",
+        "2D60.2"
+      ]
+    },
+    {
+      "id": "dev-059",
+      "style": "typed_consult",
+      "gold": [
+        "JA62.1"
+      ],
+      "candidates_top20": [
+        "2A70.1",
+        "6A02.0",
+        "6A02.1",
+        "NA23.40",
+        "2A20.02",
+        "GC00",
+        "MG30.64",
+        "1D42",
+        "1D62.0",
+        "ME65.2",
+        "SP54",
+        "QA1C",
+        "QA07.Y",
+        "QA07.Z",
+        "QA06",
+        "QA07",
+        "MG30.11",
+        "QB92",
+        "PK80.AY",
+        "PK80.AZ"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "2A20.02",
+        "MG30.11",
+        "1D62.0"
+      ]
+    },
+    {
+      "id": "dev-060",
+      "style": "ambient_transcript",
+      "gold": [
+        "5B81.01"
+      ],
+      "candidates_top20": [
+        "QC12",
+        "QC11",
+        "JB61",
+        "PL13.7",
+        "JB61.Z",
+        "QA77",
+        "QF27",
+        "JB61.0",
+        "JB61.1",
+        "QC04.4",
+        "PA61",
+        "PC31",
+        "PE01",
+        "PG51",
+        "QC04.2",
+        "QA1C",
+        "NA0A.02",
+        "NA07.03",
+        "PL14.C",
+        "QA8D"
+      ],
+      "gold_retrieved": false,
+      "predicted": [
+        "NA07.03",
+        "NA0A.02",
+        "JB61.0"
+      ]
+    }
+  ]
+}

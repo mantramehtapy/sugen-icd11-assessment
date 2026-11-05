@@ -7,6 +7,8 @@ outputs/gemma-input.jsonl
 outputs/gemma-smoke.jsonl
 analysis/results/*
 !analysis/results/.gitkeep
+!analysis/results/*.json
+!analysis/results/*.md
 ._*
 public/._*
 public/data/._*
