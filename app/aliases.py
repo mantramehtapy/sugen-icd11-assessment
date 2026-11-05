@@ -18,6 +18,13 @@ ALIASES: dict[str, frozenset[str]] = {
     "af": frozenset({"atrial fibrillation"}),
     "dvt": frozenset({"deep vein thrombosis"}),
     "pe": frozenset({"pulmonary embolism"}),
+    "viral urti": frozenset({"acute upper respiratory infection"}),
+    "asthma attack": frozenset({"asthma with exacerbation"}),
+    "vaginal thrush": frozenset({"vulvovaginal candidosis"}),
+    "chickenpox": frozenset({"varicella"}),
+    "benign enlargement of the prostate": frozenset({"hyperplasia of prostate"}),
+    "severe preeclampsia": frozenset({"severe pre-eclampsia"}),
+    "underactive thyroid": frozenset({"hypothyroidism"}),
 }
 
 

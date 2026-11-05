@@ -10,3 +10,9 @@ def test_common_abbreviation_expands_to_catalog_terms():
 def test_spanish_hypertension_alias_is_supported():
     expanded = expand_aliases("hipertensión")
     assert "hypertension" in expanded
+
+
+def test_common_clinical_phrases_expand_to_catalog_language():
+    assert "acute upper respiratory infection" in expand_aliases("viral URTI")
+    assert "vulvovaginal candidosis" in expand_aliases("vaginal thrush")
+    assert "varicella" in expand_aliases("chickenpox")
