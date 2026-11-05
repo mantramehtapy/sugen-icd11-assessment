@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import urllib.request
 from collections.abc import Callable
 from typing import Any
@@ -13,13 +14,22 @@ class OllamaClient:
         self,
         post: Callable[[str, dict[str, Any], float], dict[str, Any]] | None = None,
         model: str = "gemma4:e4b",
-        endpoint: str = "http://127.0.0.1:11434/api/chat",
+        endpoint: str | None = None,
         timeout: float = 20.0,
     ) -> None:
         self.post = post or self._post
         self.model = model
-        self.endpoint = endpoint
+        host = endpoint or os.getenv("OLLAMA_HOST", "http://127.0.0.1:11434")
+        host = host.rstrip("/")
+        self.endpoint = host if host.endswith("/api/chat") else f"{host}/api/chat"
         self.timeout = timeout
+        self.stats = {
+            "calls": 0,
+            "successes": 0,
+            "parse_failures": 0,
+            "timeouts": 0,
+            "transport_failures": 0,
+        }
 
     def choose(self, candidates: list[dict[str, str]], note: str) -> list[str]:
         prompt = {
@@ -37,10 +47,20 @@ class OllamaClient:
             ],
         }
         try:
+            self.stats["calls"] += 1
             response = self.post(self.endpoint, payload, self.timeout)
             content = response.get("message", {}).get("content", "")
-            return parse_model_codes(content)
-        except (OSError, TimeoutError, TypeError, ValueError, KeyError):
+            codes = parse_model_codes(content)
+            if not codes:
+                self.stats["parse_failures"] += 1
+                return []
+            self.stats["successes"] += 1
+            return codes
+        except TimeoutError:
+            self.stats["timeouts"] += 1
+            return []
+        except (OSError, TypeError, ValueError, KeyError):
+            self.stats["transport_failures"] += 1
             return []
 
     @staticmethod
