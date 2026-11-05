@@ -12,6 +12,7 @@ class Evidence:
     symptoms: list[str]
     history: list[str]
     negated: set[str]
+    positive_terms: set[str]
     modifiers: dict[str, str]
 
 
@@ -48,7 +49,14 @@ def extract_evidence(text: str) -> Evidence:
         else:
             symptoms.append(segment)
     for match in _NEGATION.finditer(normalized):
-        phrase = match.group(1).split(" and ")[0].strip()
-        if phrase:
+        raw_phrase = match.group(1).strip(" ,;:")
+        for phrase in re.split(r"\s+and\s+|\s*,\s*", raw_phrase):
+            phrase = phrase.strip()
+            if not phrase:
+                continue
+            negated.add(phrase)
             negated.update(tokenize(phrase))
-    return Evidence(assessment, symptoms, history, negated, {})
+    all_terms = tokenize(" ".join(assessment + symptoms + history))
+    negated_terms = {term for term in negated if " " not in term}
+    positive_terms = all_terms - negated_terms
+    return Evidence(assessment, symptoms, history, negated, positive_terms, {})
