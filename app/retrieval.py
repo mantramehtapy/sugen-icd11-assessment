@@ -3,8 +3,21 @@ from __future__ import annotations
 import math
 from collections import Counter
 
+from .aliases import expand_aliases
 from .catalog import Catalog, CatalogRow
 from .normalize import normalize_text, tokenize
+
+
+_QUERY_STOPWORDS = {
+    "a",
+    "an",
+    "and",
+    "assessment",
+    "history",
+    "known",
+    "of",
+    "the",
+}
 
 
 def _terms(row: CatalogRow) -> set[str]:
@@ -12,7 +25,9 @@ def _terms(row: CatalogRow) -> set[str]:
 
 
 def retrieve(text: str, catalog: Catalog, limit: int = 20) -> list[CatalogRow]:
-    query = tokenize(text)
+    query = set()
+    for expanded in expand_aliases(text):
+        query.update(tokenize(expanded) - _QUERY_STOPWORDS)
     if not query:
         return list(catalog.rows[:limit])
     document_frequency = Counter()
