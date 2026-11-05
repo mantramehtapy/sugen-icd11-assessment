@@ -19,6 +19,19 @@ _MISMATCH_TERMS = {
     "resistant",
     "status",
 }
+_CONDITION_DETAIL_TERMS = {
+    "hypertension": {
+        "ocular",
+        "portal",
+        "white",
+        "isolated",
+        "diastolic",
+        "systolic",
+        "secondary",
+        "elevated",
+        "blood",
+    },
+}
 
 
 @dataclass(frozen=True)
@@ -42,9 +55,14 @@ def choose_codes(text: str, catalog: Catalog, limit: int = 3) -> DeterministicRe
         title_terms = set(row.title.lower().split())
         score += sum(1.5 for term in evidence_terms if term in row.title.lower())
         missing_specificity = _MISMATCH_TERMS & title_terms - evidence_terms
+        for condition, detail_terms in _CONDITION_DETAIL_TERMS.items():
+            if condition in evidence_terms:
+                missing_specificity |= detail_terms & title_terms - evidence_terms
         score -= 2.5 * len(missing_specificity)
         if row.residual and "uncomplicated" in evidence_terms and not missing_specificity:
             score += 1.0
+        if row.residual and evidence_terms == {"hypertension"} and "unspecified" in row.title.lower():
+            score += 0.5
         ranked.append((score, row.code))
     ranked.sort(key=lambda item: (-item[0], item[1]))
     codes = [code for _, code in ranked[:limit] if catalog.is_valid(code)]
