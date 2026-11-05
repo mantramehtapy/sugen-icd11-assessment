@@ -76,7 +76,7 @@ This log records decisions made during the Sugen Technologies take-home assessme
 
 ## 2026-11-05 — Complete README with verified limits
 
-- Commit: pending
+- Commit: `9887059`
 - Decision: Replace the placeholder README with the current score, data boundary, throughput limitation, AI-tooling error, and open verification gates.
 - Options considered: omit weaknesses or state only verified facts.
 - Evidence: Dad’s review explicitly identified the placeholder README and missing required fields.
@@ -84,7 +84,7 @@ This log records decisions made during the Sugen Technologies take-home assessme
 
 ## 2026-11-05 — Final bundle remains gated
 
-- Commit: pending
+- Commit: `9887059`
 - Decision: Do not create the final Git bundle until clean-clone Docker verification, final documentation, hours statement, and final tests pass.
 - Options considered: create a provisional bundle now or wait for final validation.
 - Evidence: Docker is currently blocked and the hidden score is unknown.
