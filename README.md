@@ -20,7 +20,7 @@ Verified with the supplied `public/score.py` on the 60 supplied development note
 - top-3: **0.167** (10/60)
 - core score: **7.5 / 75**
 - structural checks: 60/60 output lines, 0 missing, 0 invalid codes, 0 duplicate IDs
-- latest automated suite: **30 passed**
+- latest automated suite: **32 passed**
 
 The score is low and the project is not submission-ready. The latest retrieval improvement increased top-20 gold-candidate recall from 20/60 to 24/60 by adding bounded clinical aliases and query stopwords.
 
